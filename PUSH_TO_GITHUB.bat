@@ -18,7 +18,7 @@ git config user.email >nul 2>nul || git config user.email "Shannuvenu@users.nore
 git remote get-url origin >nul 2>nul || git remote add origin https://github.com/Shannuvenu/tradingbotmine.git
 git add -A
 git status --short | findstr /R /C:"\.env$" /C:"token.json" >nul && (echo ERROR: a secret file is staged - aborting. & pause & exit /b 1)
-git commit -q -m "INDIA QUANT: Indian market intelligence and Upstox trading system" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01JSE3gFPLaXpcfsJgqkWy8A"
+git commit -q -m "INDIA QUANT: Windows fixes (relative DB path, UTF-8 console, logged scripts)" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01JSE3gFPLaXpcfsJgqkWy8A"
 git fetch origin >> logs\push_log.txt 2>&1
 git rev-parse -q --verify origin/main >nul && git merge --no-edit --allow-unrelated-histories -X ours origin/main
 git push -u origin main >> logs\push_log.txt 2>&1

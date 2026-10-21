@@ -7,6 +7,8 @@ if not exist ".venv\Scripts\python.exe" (
   exit /b 1
 )
 set PY=.venv\Scripts\python.exe
-%PY% -m indiaquant.cli validate-config
-%PY% -m indiaquant.cli health
+if not exist logs mkdir logs
+(%PY% -m indiaquant.cli validate-config & %PY% -m indiaquant.cli health) > logs\health.txt 2>&1
+type logs\health.txt
+echo HEALTH_DONE>>logs\health.txt
 pause

@@ -216,6 +216,11 @@ def cmd_status(args):
 
 
 def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):   # Windows consoles/redirects default to cp1252 (no ₹ sign)
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
     setup_logging()
     p = argparse.ArgumentParser(prog="indiaquant")
     p.add_argument("--sandbox", action="store_true", help="route order calls to Upstox sandbox")
