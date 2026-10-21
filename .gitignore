@@ -1,0 +1,21 @@
+# secrets & local state
+.env
+secrets/
+*.token
+token.json
+KILL
+# data, logs, reports
+data_store/
+logs/
+reports/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml

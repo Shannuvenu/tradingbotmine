@@ -1,0 +1,15 @@
+# INDIA QUANT — Python 3.11–3.13 (64-bit) on Windows 10/11
+# Lower bounds are versions the code was written against; upper bounds avoid untested major releases.
+numpy>=1.26,<3
+pandas>=2.2,<4
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+requests>=2.31,<3
+streamlit>=1.46,<2
+plotly>=5.20,<7
+# Official Upstox SDK: used only for the V3 market-data WebSocket (protobuf decoding).
+# If it fails to install, the app falls back to REST polling automatically.
+upstox-python-sdk>=2.0
+protobuf>=4.25
+websocket-client>=1.7
+pytest>=8.0

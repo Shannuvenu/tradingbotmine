@@ -1,0 +1,56 @@
+{
+  "risk": {
+    "starting_capital": 1000.0,
+    "max_capital_exposure_pct": 0.8,
+    "max_risk_per_trade_pct": 0.02,
+    "max_daily_loss_pct": 0.05,
+    "max_open_positions": 2,
+    "max_orders_per_session": 10,
+    "max_order_notional": 800.0,
+    "max_spread_pct": 0.005,
+    "max_data_age_seconds": 30,
+    "max_consecutive_failures": 3,
+    "max_concentration_pct": 0.8,
+    "max_cost_to_risk_ratio": 0.5,
+    "min_reward_cost_ratio": 3.0,
+    "allow_short": false,
+    "allow_derivatives": false,
+    "allow_option_buying": false,
+    "allow_option_writing": false,
+    "allowed_products": [
+      "I",
+      "D"
+    ],
+    "limit_price_buffer_pct": 0.002,
+    "intraday_entry_cutoff": "14:45",
+    "intraday_squareoff_time": "15:10"
+  },
+  "watchlist": [
+    "NSE_EQ|INE154A01025",
+    "NSE_EQ|INE062A01020",
+    "NSE_EQ|INE081A01020",
+    "NSE_EQ|INE733E01010",
+    "NSE_EQ|INE213A01029",
+    "NSE_EQ|INE522F01014",
+    "NSE_EQ|INE263A01024",
+    "NSE_EQ|INE242A01010",
+    "NSE_EQ|INE009A01021",
+    "NSE_EQ|INE002A01018"
+  ],
+  "benchmark_key": "NSE_INDEX|Nifty 50",
+  "sensex_key": "BSE_INDEX|SENSEX",
+  "vix_key": "NSE_INDEX|India VIX",
+  "db_path": "data_store/indiaquant.db",
+  "dashboard_host": "127.0.0.1",
+  "algo_name": "",
+  "order_tag_prefix": "IQ",
+  "enabled_strategies": [
+    "sma_crossover",
+    "donchian_breakout",
+    "rsi_reversion",
+    "bollinger_reversion",
+    "pullback_trend",
+    "orb",
+    "vwap_reversion"
+  ]
+}
